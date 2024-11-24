@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="animate-on-scroll">
+    <video id="videobg" autoplay muted loop>
+        <source src="darkbg.mp4" type="video/mp4">
+    </video>
+    <nav>
+            <h1>Danielli Lasmar</h1>
+        <ul class="menu">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>  
+        <button id="themeToggle" class="theme-toggle">
+            <i id="themeIcon" class="fas fa-sun"></i>
+        </button>    
+        </ul>            
+        <button id="menuButton" class="menu-toggle">
+            <i class="fas fa-bars"></i> <!-- Ícone de menu -->
+        </button>
+    </nav>
+    
+    <main>
+        <section id="about" style="padding-top: 90px;" class="container animate-on-scroll">
+            <div>
+                <img src="profilepic.jpeg" alt="Foto de perfil" class="profile-image">
+            </div>
+            <div class="abouttxt">
+                <h2>Sobre Mim</h2>
+                <p>Sou uma programadora fullstack apaixonada por tecnologia e inovação, dedicada a transformar ideias em soluções digitais. 
+                    Meu trabalho envolve desenvolver desde a lógica e estrutura do back-end até interfaces de usuário eficientes e intuitivas no front-end, 
+                    garantindo que cada projeto seja completo, funcional e bem adaptado às necessidades dos usuários.</p>
+                <p>Com um olhar atento para detalhes e uma abordagem centrada na experiência do usuário. Adoro enfrentar desafios e estou sempre buscando aprender e implementar 
+                    as melhores práticas do desenvolvimento web para entregar resultados excepcionais.</p>
+                <a href="mailto:dlrcp24@gmail.com" class="hire-button">Contratar</a>   
+            </div>
+        </section>
+        <section id="skills" class="container animate-on-scroll">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3><i class="fas fa-code"></i> Linguagens</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3><i class="fas fa-tools"></i> Frameworks & Bibliotecas</h3>
+                    <ul>
+                        <li>Pillow</li>
+                        <li>Nominatim</li>
+                        <li>Leaflet</li>
+                        <li>Django</li>
+                        <li>Bootstrap</li>
+                        <li>GSAP</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3 style="justify-content: space-around; width: fit-content; padding-left: 1rem; padding-right: 1rem;"><i style=" padding-left: 1rem; padding-right: 0;" class="fas fa-cloud"></i> Banco de Dados & Ferramentas</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>SQLite</li>
+                        <li>Android Studio</li>
+                        <li>Sass</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="container animate-on-scroll">
+            <h2>Meus Projetos</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <iframe 
+                        height="300px"
+                        width="100%"
+                        src="https://www.youtube.com/embed/mNoIjXkXy2Y?autoplay=1&mute=1&loop=1&playlist=mNoIjXkXy2Y" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen>
+                    </iframe>
+                    <h3>Projeto 3: Blog Dinâmico</h3>
+                    <p>Um sistema de blog com painel administrativo e suporte para postagens em tempo real.</p>
+                </div>
+                <div class="project">
+                    <img src="project7.png" alt="Projeto 3">
+                    <h3>Projeto 3: Blog Dinâmico</h3>
+                    <p>Um sistema de blog com painel administrativo e suporte para postagens em tempo real.</p>
+                </div>
+                <div class="project">
+                    <img src="project6.png" alt="Projeto 3">
+                    <h3>Projeto 3: Blog Dinâmico</h3>
+                    <p>Um sistema de blog com painel administrativo e suporte para postagens em tempo real.</p>
+                </div>
+                <div class="project">
+                    <img src="project5.png" alt="Projeto 2">
+                    <h3>Projeto 2: Sistema de Gestão</h3>
+                    <p>Uma plataforma completa para gerenciar produtos, vendas e estoque de pequenas empresas.</p>
+                </div>
+                <div class="project">
+                    <img src="project1.png" alt="Projeto 1">
+                    <h3>Projeto 1: Aplicativo de Mapeamento</h3>
+                    <p>Uma aplicação web para mapear feiras de agricultura familiar, ajudando populações vulneráveis a encontrar alimentos saudáveis.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <i>&copy; 2024 Danielli Lasmar. Todos os direitos reservados.</i>
+    </footer>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

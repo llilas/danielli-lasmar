@@ -1,0 +1,387 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #6c5ce7;
+}
+
+#videobg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-100;
+    }
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    color: var(--text-color);
+    z-index: -11;
+    overflow-x: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+    --background-color: #1e1e2f;
+    --text-color: #e0e0e0;
+    --primary-color: #8c7ae6;
+}
+
+nav {
+    position: fixed; 
+    width: 100%; 
+    z-index: 55; 
+    height: 80px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #b009f1;
+    background-color: var(--primary-color); 
+    color: #ffffff;
+    padding: 0.5rem 1rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.507); 
+}
+
+nav h1 {
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 1rem;
+}
+
+nav .menu li {
+    margin: 0 1rem;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+button.theme-toggle {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s, background-color 0.6s ease;
+}
+
+button.theme-toggle:hover {
+    transform: scale(1.1); 
+    background-color: #a29bfe; 
+}
+
+button.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none; /* Esconde o menu em telas pequenas */
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 1rem;
+        width: 100vw;
+    }
+
+    nav .menu.active {
+        display: flex; /* Mostra o menu quando ativo */
+        background: #29033a98;
+    }
+
+    button.menu-toggle {
+        display: block; /* Exibe o botão de menu em telas pequenas */
+        margin: 2rem;
+    }
+
+    nav h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+button.theme-toggle {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s, background-color 0.6s ease;
+}
+
+button.theme-toggle:hover {
+    transform: scale(1.1); 
+    background-color: #a29bfe; 
+}
+
+button.theme-toggle i {
+    font-size: 1.5rem;
+    transition: transform 1s ease, color 1s ease;
+}
+
+body.dark-theme button.theme-toggle i {
+    transform: rotate(360deg); 
+    color: #fbc531; 
+}
+
+main{
+    display: block;
+    padding-top: 80px;
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+    justify-content: center; /* Centraliza os elementos em telas pequenas */
+    align-items: center; /* Alinha os elementos verticalmente */
+    width: 100vw;
+    height: fit-content;
+    gap: 2rem; /* Adiciona espaçamento entre os itens */
+    margin: auto;
+    margin-bottom: 8rem;
+    margin-top: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.profile-image {
+    display: block;
+    width: 90vw; /* Ocupa quase toda a largura em telas pequenas */
+    max-width: 400px; /* Limita o tamanho máximo em telas grandes */
+    margin: 1rem auto;
+    border-radius: 20px;
+    border: 4px solid var(--primary-color);
+}
+
+.abouttxt {
+    text-align: center; /* Centraliza o texto em telas menores */
+    flex: 1; /* Permite que o texto se ajuste ao espaço disponível */
+    margin: 1rem;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hire-button {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 25px;
+    font-weight: 200;
+    color: #fff;
+    background: linear-gradient(45deg, #8e44ad, #d2b4de);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hire-button:hover {
+    background: linear-gradient(45deg, #c675e6, #b009f1);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    #about {
+        gap: 1rem; /* Reduz o espaçamento entre itens */
+        width: 100vw;
+        padding: auto;
+    }
+
+    .abouttxt {
+        text-align: center; /* Mantém o texto centralizado */
+        margin: auto;
+        padding: 1rem;
+        width: 90%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+
+    .profile-image {
+        margin: auto;
+        width: 90%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+}
+
+/* Ajuste adicional para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do texto para caber melhor */
+    }
+
+    .abouttxt {
+        font-size: 0.9rem; /* Texto menor para telas muito pequenas */
+    }
+}
+
+#skills, #projects{
+    width: 100vw;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta dinamicamente o número de colunas */
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center; /* Centraliza o grid horizontalmente */
+    align-items: stretch; /* Faz com que todos os itens tenham a mesma altura */
+}
+
+.skill {
+    background-color: var(--primary-color);
+    color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex; /* Habilita flexbox para alinhar conteúdo interno */
+    flex-direction: column; /* Garante que o conteúdo interno seja organizado verticalmente */
+    justify-content: space-between; /* Ajusta o conteúdo interno de forma equilibrada */
+    height: 90%; /* Permite que o item preencha toda a altura disponível */
+}
+
+
+.skill h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.skill ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill li {
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.skill h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 1100px) { 
+    #skills, #projects{
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+    }
+    .skills-grid, .projects-grid {
+        display: flex;
+        padding: 2rem;
+        flex-wrap: wrap;
+        justify-content: center; /* Centraliza o grid horizontalmente */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+    .skill, .project {
+        width: 40vw;
+        min-width: 300px;
+    }
+    iframe{
+        height: 200px;
+    }
+}
+@media (max-width: 500px) { 
+    #skills{
+        margin-top: 15rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.projects-grid {
+    gap: 2rem;
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza o grid horizontalmente */
+    align-content: center; /* Centraliza os itens verticalmente */
+}
+
+.project {
+    max-width: 500px;
+    background-color: var(--primary-color);
+    color: #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: auto;
+    display: flex; /* Habilita flexbox para alinhar conteúdo interno */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ajusta o conteúdo interno de forma equilibrada */
+    height: 90%; /* Permite que o item preencha toda a altura disponível */
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+}
+
+.project p {
+    font-size: 0.9rem;
+}
+
+.projects-grid img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    bottom: 0;
+    font-size: 12px;
+    width: 100vw;
+    font-weight: 100;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
