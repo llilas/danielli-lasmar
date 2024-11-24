@@ -1,4 +1,4 @@
-#Meu Portfólio
+# Meu Portfólio
 Bem-vindo ao repositório do meu portfólio! 
 Este projeto foi criado para apresentar minhas habilidades como desenvolvedora Full Stack, bem como os projetos nos quais trabalhei. Ele é responsivo, moderno e projetado com as melhores práticas de desenvolvimento web.
 
