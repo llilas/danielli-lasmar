@@ -72,6 +72,7 @@ nav .menu {
     position: relative;
     align-items: center;
     margin: 1rem;
+    margin-right: 2rem;
 }
 
 nav .menu li {
@@ -86,7 +87,6 @@ nav .menu a {
 
 button.theme-toggle {
     width: 50px;
-    margin-right: 2rem;
     height: 50px;
     background: var(--primary-color);
     color: #fff;
@@ -169,8 +169,6 @@ body.dark-theme button.theme-toggle i {
 
 main{
     padding-top: 4rem;
-    position: relative;
-    z-index: -20;
 }
 
 #about {
