@@ -4,14 +4,13 @@
     --primary-color: #6c5ce7;
 }
 
-
-.animate-on-scroll {
+section {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.animate-on-scroll.visible {
+section.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -28,10 +27,9 @@
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    color: var(--text-color);
-    z-index: -101;
+    padding: 0;
+    z-index: -1;
     overflow-x: hidden;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -44,12 +42,12 @@ body.dark-theme {
     --primary-color: #8c7ae6;
 }
 
-nav {
-    position: sticky; 
-    width: 100%; 
-    z-index: 505; 
-    height: 80px;
+nav {  
+    z-index: 1000; 
+    position: fixed;
     top: 0;
+    width: 100vw;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,6 +166,12 @@ body.dark-theme button.theme-toggle i {
     color: #fbc531; 
 }
 
+main{
+    padding-top: 4rem;
+    position: relative;
+    z-index: -20;
+}
+
 #about {
     display: flex;
     flex-wrap: wrap; 
@@ -178,7 +182,6 @@ body.dark-theme button.theme-toggle i {
     gap: 2rem; 
     margin: auto;
     margin-bottom: 8rem;
-    margin-top: 2rem;
 }
 
 .container {
@@ -237,7 +240,6 @@ h2 {
     #about {
         gap: 1rem; 
         width: 100vw;
-        padding: auto;
     }
 
     .abouttxt {
@@ -249,7 +251,8 @@ h2 {
 
     .profile-image {
         margin: auto;
-        width: 90%; 
+        width: 80%; 
+        border: 1px solid var(--primary-color);
     }
 }
 
@@ -334,9 +337,6 @@ h2 {
     #contact{
         width: 90vw;
         margin: auto;
-    }
-    nav{
-        position: sticky; 
     }
 }
 

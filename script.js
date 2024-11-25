@@ -63,42 +63,24 @@ menuButton.addEventListener('click', () => {
 
 
 
+// Aguarda o carregamento do DOM
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".animate-on-scroll"); // Seleciona todas as seções com a classe "animate-on-scroll"
 
-
-
-
-
-// Adicionar animações onscroll
-document.addEventListener("DOMContentLoaded", () => { // Aguarda o carregamento do DOM antes de executar
-    const animatedElements = document.querySelectorAll(".animate-on-scroll"); // Seleciona todos os elementos com a classe "animate-on-scroll"
-
-    // Cria um IntersectionObserver para monitorar elementos ao entrar na viewport
+    // Cria um IntersectionObserver para monitorar os elementos
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => { // Itera sobre cada entrada observada
-            if (entry.isIntersecting) { // Verifica se o elemento está visível na viewport
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) { // Verifica se o elemento está visível
                 entry.target.classList.add("visible"); // Adiciona a classe "visible" para iniciar a animação
-                observer.unobserve(entry.target); // Para de observar o elemento após a primeira interseção
+                observer.unobserve(entry.target); // Para de observar o elemento após a animação
             }
         });
     }, {
-        threshold: 0.1 // Percentual de visibilidade necessário para disparar a interseção (10% visível)
+        threshold: 0.1 // Dispara quando 10% do elemento está visível na tela
     });
 
-    // Observa cada elemento com a classe "animate-on-scroll"
-    animatedElements.forEach((el) => observer.observe(el));
-});
-
-// Scroll suave para os links do menu
-document.querySelectorAll('nav a').forEach(anchor => { // Seleciona todos os links dentro do elemento <nav>
-    anchor.addEventListener('click', function (e) { // Adiciona um evento de clique a cada link
-        e.preventDefault(); // Previne o comportamento padrão do clique (navegação imediata)
-        const targetId = this.getAttribute('href').substring(1); // Obtém o ID do elemento alvo removendo o "#" do href
-        const targetElement = document.getElementById(targetId); // Seleciona o elemento alvo pelo ID
-
-        // Faz o scroll suave até o elemento alvo
-        window.scrollTo({
-            top: targetElement.offsetTop - 60, // Desloca até o topo do elemento, ajustando pela altura do menu
-            behavior: 'smooth' // Ativa o comportamento suave no scroll
-        });
+    // Observa todos os elementos selecionados
+    sections.forEach((section) => {
+        observer.observe(section);
     });
 });
