@@ -168,10 +168,6 @@ body.dark-theme button.theme-toggle i {
     color: #fbc531; 
 }
 
-main{
-    padding-top: 80px;
-}
-
 #about {
     display: flex;
     flex-wrap: wrap; 
@@ -319,7 +315,6 @@ h2 {
 
 @media (max-width: 1100px) { 
     #skills, #projects, #contact, #midia{
-        margin-top: 10rem;
         margin-bottom: 3rem;
     }
     .skills-grid, .projects-grid {
@@ -340,11 +335,8 @@ h2 {
         width: 90vw;
         margin: auto;
     }
-}
-@media (max-width: 500px) { 
-    #skills{
-        margin-top: 15rem;
-        margin-bottom: 3rem;
+    nav{
+        position: sticky; 
     }
 }
 
