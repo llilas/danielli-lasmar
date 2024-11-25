@@ -438,13 +438,16 @@ form button {
     margin: auto;
   }
   #curriculo p{
-    width: fit-content;
+    width: 90%;
     margin: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    flex: 1; 
+
   }
   #curriculo {
     margin: auto;
     width: 90vw;
-    min-width: 500px;
     height: fit-content;
     margin-bottom: 2rem;
     margin-top: 2rem;
